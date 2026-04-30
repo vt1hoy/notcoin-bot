@@ -10,7 +10,7 @@ if not TOKEN:
 
 # LINKS
 GAME_URL = "https://notcoin-ten.vercel.app/"
-
+CHANNEL_URL = "https://t.me/notListener"
 # /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = (
@@ -21,6 +21,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     keyboard = InlineKeyboardMarkup([
         [InlineKeyboardButton("🎮 Play Game", web_app=WebAppInfo(url=GAME_URL))]
+        [InlineKeyboardButton("📡 Open Channel", url=CHANNEL_URL)]
     ])
 
     await update.message.reply_text(text, reply_markup=keyboard)
