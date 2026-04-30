@@ -20,7 +20,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
     keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("🎮 Play Game", web_app=WebAppInfo(url=GAME_URL))]
+        [InlineKeyboardButton("🎮 Play Game", web_app=WebAppInfo(url=GAME_URL))],
         [InlineKeyboardButton("📡 Open Channel", url=CHANNEL_URL)]
     ])
 
